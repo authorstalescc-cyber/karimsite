@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karim Mokhtar | karimmokhtar.online</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Syne for bold headers, Inter for readable body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons for minimalist, professional icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        black: '#050505',
+                        white: '#f8f8f8',
+                        gray: {
+                            custom: '#1a1a1a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f8f8f8;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fff;
+        }
+
+        /* Hero Image Gradient Mask */
+        .hero-img-mask {
+            mask-image: linear-gradient(to right, transparent 0%, black 20%, black 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 100%);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-img-mask {
+                mask-image: linear-gradient(to top, transparent 0%, black 20%, black 100%);
+                -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 100%);
+            }
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card Hover Effect */
+        .hover-invert {
+            transition: all 0.4s ease;
+        }
+        .hover-invert:hover {
+            background-color: #f8f8f8;
+            color: #050505;
+        }
+        .hover-invert:hover i {
+            color: #050505 !important;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 mix-blend-difference bg-transparent py-6 px-6 lg:px-12 flex justify-between items-center text-white">
+        <a href="#" class="font-display font-bold text-2xl tracking-tighter">
+            KARIM<span class="opacity-50">.</span>
+        </a>
+        <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide uppercase">
+            <a href="#expertise" class="hover:text-gray-400 transition-colors">Expertise</a>
+            <a href="#about" class="hover:text-gray-400 transition-colors">About</a>
+            <a href="#contact" class="hover:text-gray-400 transition-colors">Contact</a>
+        </div>
+        <a href="#contact" class="hidden md:block border border-white px-6 py-2 text-sm font-medium uppercase tracking-wide hover:bg-white hover:text-black transition-all">
+            Let's Talk
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col-reverse lg:flex-row items-center pt-20 lg:pt-0">
+        
+        <!-- Left Content -->
+        <div class="w-full lg:w-3/5 px-6 lg:px-20 z-10 py-16 lg:py-0">
+            <p class="font-sans text-sm uppercase tracking-[0.3em] text-gray-400 mb-6 reveal delay-100">karimmokhtar.online</p>
+            
+            <h1 class="font-display text-5xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] tracking-tight mb-8 reveal delay-200">
+                DESIGNING <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-600">SYSTEMS.</span> <br>
+                CODING VIBES.
+            </h1>
+            
+            <div class="font-sans text-lg lg:text-xl text-gray-300 font-light max-w-xl mb-10 leading-relaxed reveal delay-300">
+                I merge aesthetics with operational efficiency. Specializing in Graphic Design, Operations Management, Vibe Coding, and Educational Systems.
+            </div>
+
+            <div class="flex flex-wrap gap-4 reveal delay-400">
+                <a href="#expertise" class="bg-white text-black px-8 py-4 font-medium uppercase tracking-wider text-sm hover:bg-gray-200 transition-colors">
+                    Explore My Work
+                </a>
+                <a href="#contact" class="border border-gray-600 text-white px-8 py-4 font-medium uppercase tracking-wider text-sm hover:border-white transition-colors">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="w-full lg:w-2/5 h-[50vh] lg:h-screen relative reveal">
+            <!-- Note: Using the exact uploaded filename. Fallback to a placeholder if the local file is not found. -->
+            <img 
+                src="ChatGPT%20Image%20Apr%2023,%202026,%2006_18_08%20PM.jpg" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600096194534-95cf5ece04cf?q=80&w=1000&auto=format&fit=crop';" 
+                alt="Karim Mokhtar" 
+                class="w-full h-full object-cover object-center grayscale lg:hero-img-mask"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
+    </section>
+
+    <!-- Marquee Divider -->
+    <div class="w-full bg-white text-black py-4 border-y border-gray-800 marquee-container font-display font-bold uppercase tracking-widest text-lg">
+        <div class="marquee-content">
+            <span class="mx-8">Graphic Design</span> • 
+            <span class="mx-8">Operations Management</span> • 
+            <span class="mx-8">Vibe Coding</span> • 
+            <span class="mx-8">Educational Systems</span> • 
+            <span class="mx-8">Graphic Design</span> • 
+            <span class="mx-8">Operations Management</span> • 
+            <span class="mx-8">Vibe Coding</span> • 
+            <span class="mx-8">Educational Systems</span> •
+        </div>
+    </div>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 px-6 lg:px-20 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display text-4xl lg:text-6xl font-bold mb-16 reveal">Core <span class="text-gray-500">Expertise.</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-gray-800 reveal">
+                
+                <!-- Service 1 -->
+                <div class="p-10 lg:p-16 border-r border-b border-gray-800 hover-invert group">
+                    <i class="ph ph-bezier-curve text-5xl mb-8 text-white"></i>
+                    <h3 class="font-display text-2xl font-bold mb-4 uppercase">Graphic Design</h3>
+                    <p class="font-sans text-gray-400 group-hover:text-gray-700 leading-relaxed font-light">
+                        Crafting bold, minimalist, and impactful visual identities. Every pixel is placed with intention, ensuring your brand communicates power and clarity.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-10 lg:p-16 border-r border-b border-gray-800 hover-invert group">
+                    <i class="ph ph-kanban text-5xl mb-8 text-white"></i>
+                    <h3 class="font-display text-2xl font-bold mb-4 uppercase">Operations Management</h3>
+                    <p class="font-sans text-gray-400 group-hover:text-gray-700 leading-relaxed font-light">
+                        Streamlining workflows and optimizing processes. I build scalable operational frameworks that transform chaos into structured success.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-10 lg:p-16 border-r border-b border-gray-800 hover-invert group">
+                    <i class="ph ph-terminal-window text-5xl mb-8 text-white"></i>
+                    <h3 class="font-display text-2xl font-bold mb-4 uppercase">Vibe Coding</h3>
+                    <p class="font-sans text-gray-400 group-hover:text-gray-700 leading-relaxed font-light">
+                        Developing digital experiences that don't just function, but *feel* right. Writing clean code focused on user psychology, motion, and immaculate aesthetics.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-10 lg:p-16 border-r border-b border-gray-800 hover-invert group">
+                    <i class="ph ph-graduation-cap text-5xl mb-8 text-white"></i>
+                    <h3 class="font-display text-2xl font-bold mb-4 uppercase">Educational Systems</h3>
+                    <p class="font-sans text-gray-400 group-hover:text-gray-700 leading-relaxed font-light">
+                        Architecting modern learning environments. I design e-learning platforms and educational structures that maximize engagement and knowledge retention.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Quote Section -->
+    <section id="about" class="py-32 px-6 lg:px-20 bg-gray-custom relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 opacity-5">
+            <i class="ph-fill ph-quotes text-[30rem]"></i>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+            <p class="font-display text-3xl lg:text-5xl leading-tight font-bold mb-10">
+                "Design is not just what it looks like. It's how the entire system operates, breathes, and scales."
+            </p>
+            <div class="w-16 h-1 bg-white mx-auto mb-6"></div>
+            <p class="font-sans uppercase tracking-[0.2em] text-gray-400 text-sm">Karim Mokhtar</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 lg:px-20 bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-end border-b border-gray-800 pb-16 reveal">
+            <div class="mb-10 lg:mb-0">
+                <h2 class="font-display text-5xl lg:text-7xl font-bold mb-6">Let's build <br><span class="text-gray-600">something.</span></h2>
+                <a href="mailto:hello@karimmokhtar.online" class="font-sans text-xl lg:text-2xl border-b border-white pb-1 hover:text-gray-400 hover:border-gray-400 transition-colors">
+                    hello@karimmokhtar.online
+                </a>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="w-14 h-14 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                    <i class="ph ph-linkedin-logo text-2xl"></i>
+                </a>
+                <a href="#" class="w-14 h-14 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                    <i class="ph ph-behance-logo text-2xl"></i>
+                </a>
+                <a href="#" class="w-14 h-14 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                    <i class="ph ph-github-logo text-2xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center text-sm font-sans text-gray-500 uppercase tracking-wider">
+            <p>&copy; 2026 Karim Mokhtar. All rights reserved.</p>
+            <p class="mt-4 md:mt-0">Based in Egypt</p>
+        </div>
+    </section>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Run once
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
