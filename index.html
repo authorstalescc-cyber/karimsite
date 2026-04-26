@@ -18,7 +18,16 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo">Karim<span>.</span></a>
+      <a href="index.html" class="logo" aria-label="Karim Mokhtar — Home">
+        <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="34" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+          <path d="M11 9 L11 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M11 18 L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M11 18 L20 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <circle cx="26" cy="27" r="2" fill="#c9a96e"/>
+        </svg>
+        <span class="logo-text">Karim Mokhtar<span class="logo-dot">.</span></span>
+      </a>
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
@@ -27,7 +36,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -52,6 +61,8 @@
           </div>
         </div>
         <div class="hero-image-wrapper">
+          <span class="hero-accent hero-accent--top">10+ Years</span>
+          <span class="hero-accent hero-accent--bottom">Available for Work</span>
           <img src="assets/images/karim-hero.jpg" alt="Karim Mokhtar" class="hero-image" loading="eager">
         </div>
       </div>
@@ -64,7 +75,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">What I Do</span>
-        <h2 class="section-title">Core <span style="color: var(--color-text-muted);">Expertise.</span></h2>
+        <h2 class="section-title">Core <span class="text-muted">Expertise.</span></h2>
       </div>
       <div class="services-detail-grid reveal">
         <div class="service-detail-card">
@@ -96,7 +107,7 @@
           <p>Corporate training for CFI, EL7, Koyfin — curriculum design, learning strategy, and teaching methodology.</p>
         </div>
       </div>
-      <div style="text-align: center; margin-top: var(--space-3xl);">
+      <div class="center-block">
         <a href="services.html" class="btn btn--ghost">View All Services <span class="arrow">→</span></a>
       </div>
     </div>
@@ -139,11 +150,11 @@
 
   <!-- ============ CTA SECTION ============ -->
   <div class="section-divider"></div>
-  <section class="section" id="cta-section" style="text-align: center;">
+  <section class="section section--center" id="cta-section">
     <div class="container container--narrow reveal">
-      <span class="section-label" style="justify-content: center;">Get in Touch</span>
-      <h2 class="section-title" style="margin-bottom: var(--space-lg);">Let's Build Something <span style="color: var(--color-accent); font-style: italic;">Remarkable</span></h2>
-      <p class="section-desc" style="margin: 0 auto var(--space-2xl);">Whether you're looking for strategic guidance, professional training, or a trusted partner to help scale your vision — I'd love to hear from you.</p>
+      <span class="section-label section-label--center">Get in Touch</span>
+      <h2 class="section-title section-title--mb-lg">Let's Build Something <span class="text-accent-italic">Remarkable</span></h2>
+      <p class="section-desc section-desc--center">Whether you're looking for strategic guidance, professional training, or a trusted partner to help scale your vision — I'd love to hear from you.</p>
       <a href="contact.html" class="btn btn--primary">Start a Conversation</a>
     </div>
   </section>
@@ -151,6 +162,19 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="logo footer-logo" aria-label="Karim Mokhtar — Home">
+          <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="1" width="34" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+            <path d="M11 9 L11 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M11 18 L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M11 18 L20 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="26" cy="27" r="2" fill="#c9a96e"/>
+          </svg>
+          <span class="logo-text">Karim Mokhtar<span class="logo-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">Designing Systems. Coding Vibes.</p>
+      </div>
       <div class="footer-inner">
         <div class="footer-copy">
           &copy; 2026 Karim Mokhtar. All rights reserved.

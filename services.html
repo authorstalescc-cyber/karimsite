@@ -11,7 +11,16 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo">Karim<span>.</span></a>
+      <a href="index.html" class="logo" aria-label="Karim Mokhtar — Home">
+        <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="34" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+          <path d="M11 9 L11 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M11 18 L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M11 18 L20 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <circle cx="26" cy="27" r="2" fill="#c9a96e"/>
+        </svg>
+        <span class="logo-text">Karim Mokhtar<span class="logo-dot">.</span></span>
+      </a>
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -20,74 +29,280 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="page-content" style="padding-top: var(--header-height);">
+  <main class="page-content page-content--with-header">
 
-    <!-- PAGE HERO -->
-    <section class="section" style="padding-bottom: 0;">
+    <!-- ============ PAGE HERO ============ -->
+    <section class="section section--no-bottom svc-hero">
       <div class="container">
         <div class="hero-label reveal">Services</div>
-        <h1 class="hero-title reveal" style="margin-bottom: var(--space-lg);">Core <span class="highlight">Expertise.</span></h1>
-        <p class="hero-subtitle reveal" style="max-width: 700px;">From WordPress to custom-built platforms, from Adobe suites to AI-powered design, from LMS architecture to corporate training — I deliver end-to-end digital solutions.</p>
+        <h1 class="hero-title reveal section-title--mb-lg">
+          Four <span class="highlight">disciplines.</span><br>
+          One <span class="highlight">creative system.</span>
+        </h1>
+        <p class="hero-subtitle reveal page-hero-subtitle">From WordPress to custom-built platforms, from Adobe suites to AI-powered design, from LMS architecture to corporate training — I deliver end-to-end digital solutions.</p>
+        <div class="svc-hero-tags reveal">
+          <span class="svc-tag-pill"><span class="svc-tag-dot"></span> Web Development</span>
+          <span class="svc-tag-pill"><span class="svc-tag-dot"></span> Design</span>
+          <span class="svc-tag-pill"><span class="svc-tag-dot"></span> LMS Systems</span>
+          <span class="svc-tag-pill"><span class="svc-tag-dot"></span> Training</span>
+        </div>
       </div>
     </section>
 
-    <!-- MARQUEE -->
-    <div class="marquee-wrap" style="margin: var(--space-3xl) 0;">
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee-wrap marquee-wrap--spaced">
       <div class="marquee-track">
         <div class="marquee-content">
-          <span>WordPress</span><span class="marquee-dot">•</span>
-          <span>Web Development</span><span class="marquee-dot">•</span>
-          <span>Graphic Design</span><span class="marquee-dot">•</span>
-          <span>LMS Architecture</span><span class="marquee-dot">•</span>
-          <span>Training & Education</span><span class="marquee-dot">•</span>
-          <span>UI/UX Design</span><span class="marquee-dot">•</span>
-          <span>WordPress</span><span class="marquee-dot">•</span>
-          <span>Web Development</span><span class="marquee-dot">•</span>
-          <span>Graphic Design</span><span class="marquee-dot">•</span>
-          <span>LMS Architecture</span><span class="marquee-dot">•</span>
-          <span>Training & Education</span><span class="marquee-dot">•</span>
-          <span>UI/UX Design</span><span class="marquee-dot">•</span>
+          <span>WordPress</span><span class="marquee-dot">✦</span>
+          <span>Web Development</span><span class="marquee-dot">✦</span>
+          <span>Graphic Design</span><span class="marquee-dot">✦</span>
+          <span>LMS Architecture</span><span class="marquee-dot">✦</span>
+          <span>Training & Education</span><span class="marquee-dot">✦</span>
+          <span>UI/UX Design</span><span class="marquee-dot">✦</span>
+          <span>WordPress</span><span class="marquee-dot">✦</span>
+          <span>Web Development</span><span class="marquee-dot">✦</span>
+          <span>Graphic Design</span><span class="marquee-dot">✦</span>
+          <span>LMS Architecture</span><span class="marquee-dot">✦</span>
+          <span>Training & Education</span><span class="marquee-dot">✦</span>
+          <span>UI/UX Design</span><span class="marquee-dot">✦</span>
         </div>
       </div>
     </div>
 
-    <!-- ═══ SERVICE 1: WEB DEVELOPMENT & WORDPRESS ═══ -->
-    <section class="section" id="svc-web">
+    <!-- ============ STATS STRIP ============ -->
+    <section class="svc-stats-strip">
       <div class="container">
-        <div class="svc-full reveal">
-          <div class="svc-full-header">
-            <span class="section-label">01</span>
-            <h2 class="section-title">Web Development & WordPress</h2>
-            <p class="section-desc">Building, managing, and scaling web platforms — from WordPress ecosystems to fully custom-built applications.</p>
+        <div class="svc-stats-grid reveal">
+          <div class="svc-stat">
+            <div class="svc-stat-num">10<span>+</span></div>
+            <div class="svc-stat-label">Years of Practice</div>
           </div>
-          <div class="svc-full-grid">
-            <div class="svc-full-card">
-              <h4>WordPress Management</h4>
-              <p>Deep expertise in managing WordPress sites at scale — from troubleshooting complex issues to performance optimization, security hardening, and seamless plugin/theme management.</p>
+          <div class="svc-stat">
+            <div class="svc-stat-num">50<span>+</span></div>
+            <div class="svc-stat-label">Projects Delivered</div>
+          </div>
+          <div class="svc-stat">
+            <div class="svc-stat-num">4</div>
+            <div class="svc-stat-label">Core Disciplines</div>
+          </div>
+          <div class="svc-stat">
+            <div class="svc-stat-num">3</div>
+            <div class="svc-stat-label">Corporate Clients</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICE 01: WEB DEVELOPMENT & WORDPRESS ═══ -->
+    <section class="section svc-block" id="svc-web">
+      <div class="container">
+        <div class="svc-block-grid">
+          <div class="svc-block-aside reveal">
+            <div class="svc-block-num">01</div>
+            <div class="svc-block-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
             </div>
-            <div class="svc-full-card">
-              <h4>Hosting & cPanel</h4>
-              <p>Hands-on experience with major hosting providers and cPanel environments — server configuration, DNS management, SSL setup, email routing, and migration strategies.</p>
+            <span class="section-label">Web Development</span>
+            <h2 class="section-title">Building, scaling, and shipping web platforms.</h2>
+            <p class="section-desc">From WordPress ecosystems to custom-built applications — full ownership of the stack.</p>
+            <div class="svc-tech-row">
+              <span class="skill-tag">WordPress</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">cPanel</span>
+              <span class="skill-tag">phpMyAdmin</span>
             </div>
-            <div class="svc-full-card">
-              <h4>Database Management</h4>
-              <p>Proficient in phpMyAdmin for database administration — query optimization, backup strategies, data migration, and troubleshooting database-level WordPress issues.</p>
+          </div>
+          <div class="svc-block-content">
+            <div class="svc-feature-grid reveal">
+              <div class="svc-feature">
+                <div class="svc-feature-num">01</div>
+                <h4>WordPress Management</h4>
+                <p>Managing WordPress sites at scale — troubleshooting complex issues, performance optimization, security hardening, and seamless plugin/theme management.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">02</div>
+                <h4>Hosting & cPanel</h4>
+                <p>Hands-on experience with major hosting providers and cPanel — server configuration, DNS, SSL, email routing, and migration strategies.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">03</div>
+                <h4>Database Management</h4>
+                <p>Proficient in phpMyAdmin — query optimization, backup strategies, data migration, and database-level WordPress troubleshooting.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">04</div>
+                <h4>Custom Plugin Development</h4>
+                <p>Bespoke WordPress plugins — custom post types, REST API integrations, advanced security layers, and video protection systems.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">05</div>
+                <h4>Node.js Applications</h4>
+                <p>Modern web applications using Node.js — RESTful APIs, real-time features, server-side rendering, and scalable backend architectures.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">06</div>
+                <h4>Custom PHP Development</h4>
+                <p>Building custom PHP platforms from scratch — MVC architecture, secure auth, multilingual support, high-performance database-driven apps.</p>
+              </div>
             </div>
-            <div class="svc-full-card">
-              <h4>Custom Plugin Development</h4>
-              <p>Building bespoke WordPress plugins tailored to specific business needs — from custom post types and REST API integrations to advanced security layers and video protection systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICE 02: DESIGN ═══ -->
+    <section class="section svc-block svc-block--alt" id="svc-design">
+      <div class="container">
+        <div class="svc-block-grid svc-block-grid--reverse">
+          <div class="svc-block-content">
+            <div class="svc-feature-grid reveal">
+              <div class="svc-feature">
+                <div class="svc-feature-num">01</div>
+                <h4>Adobe Creative Suite</h4>
+                <p>Advanced proficiency in <strong>Photoshop</strong>, <strong>Illustrator</strong>, and <strong>InDesign</strong> — brand identities, marketing collateral, publication layouts, and digital assets.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">02</div>
+                <h4>UI/UX Design</h4>
+                <p>Designing intuitive interfaces with <strong>Adobe XD</strong> — wireframing, prototyping, user flow mapping, and design system creation.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">03</div>
+                <h4>Web Design & Page Builders</h4>
+                <p>Extensive experience with <strong>Elementor</strong> and <strong>Wix</strong> — responsive, pixel-perfect websites with advanced custom CSS and dynamic content.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">04</div>
+                <h4>AI-Powered Design</h4>
+                <p>Pioneering the fusion of <strong>AI models</strong> with <strong>Adobe tools</strong> — generative AI for rapid prototyping, asset creation, and pushing boundaries.</p>
+              </div>
             </div>
-            <div class="svc-full-card">
-              <h4>Node.js Applications</h4>
-              <p>Developing modern web applications using Node.js — RESTful APIs, real-time features, server-side rendering, and scalable backend architectures.</p>
+          </div>
+          <div class="svc-block-aside reveal">
+            <div class="svc-block-num">02</div>
+            <div class="svc-block-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
             </div>
-            <div class="svc-full-card">
-              <h4>Custom PHP Development</h4>
-              <p>Building custom PHP platforms from scratch — MVC architecture, secure authentication systems, multilingual support, and high-performance database-driven applications.</p>
+            <span class="section-label">Graphic & Web Design</span>
+            <h2 class="section-title">Where aesthetics meet engineering.</h2>
+            <p class="section-desc">Powered by Adobe's creative suite, modern page builders, and AI-enhanced workflows.</p>
+            <div class="svc-tech-row">
+              <span class="skill-tag">Photoshop</span>
+              <span class="skill-tag">Illustrator</span>
+              <span class="skill-tag">InDesign</span>
+              <span class="skill-tag">Adobe XD</span>
+              <span class="skill-tag">Elementor</span>
+              <span class="skill-tag">AI Fusion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICE 03: LMS ═══ -->
+    <section class="section svc-block" id="svc-lms">
+      <div class="container">
+        <div class="svc-block-grid">
+          <div class="svc-block-aside reveal">
+            <div class="svc-block-num">03</div>
+            <div class="svc-block-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
+            </div>
+            <span class="section-label">LMS & Educational Systems</span>
+            <h2 class="section-title">Architecting modern learning environments.</h2>
+            <p class="section-desc">From deploying established platforms to building a custom LMS from the ground up.</p>
+            <div class="svc-tech-row">
+              <span class="skill-tag">Moodle</span>
+              <span class="skill-tag">LearnPress</span>
+              <span class="skill-tag">LearnDash</span>
+              <span class="skill-tag">Tutor LMS</span>
+              <span class="skill-tag skill-tag--accent">Scratch LMS</span>
+            </div>
+          </div>
+          <div class="svc-block-content">
+            <div class="svc-feature-grid reveal">
+              <div class="svc-feature">
+                <div class="svc-feature-num">01</div>
+                <h4>Moodle</h4>
+                <p>Long-standing expertise — course design, plugin customization, SCORM integration, grading systems, and large-scale institutional deployment.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">02</div>
+                <h4>WordPress LMS Platforms</h4>
+                <p>Deep experience with <strong>LearnPress</strong>, <strong>LearnDash</strong>, and <strong>Tutor LMS</strong> — complete ecosystems with enrollment, certification, drip content, and payments.</p>
+              </div>
+              <div class="svc-feature svc-feature--featured">
+                <div class="svc-feature-num">03</div>
+                <h4>Scratch LMS — Custom Built</h4>
+                <p>Designed and built <strong>Scratch LMS</strong> from the ground up — a fully custom learning management system tailored for specific educational workflows, user roles, and content delivery models.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">04</div>
+                <h4>Curriculum Architecture</h4>
+                <p>Designing structured learning paths, assessment frameworks, and content strategies that maximize engagement and knowledge retention.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICE 04: TRAINING ═══ -->
+    <section class="section svc-block svc-block--alt" id="svc-training">
+      <div class="container">
+        <div class="svc-block-grid svc-block-grid--reverse">
+          <div class="svc-block-content">
+            <div class="svc-clients-grid reveal">
+              <div class="svc-client-card">
+                <div class="client-badge">Corporate Client</div>
+                <h4>CFI</h4>
+                <p class="svc-client-meta">Corporate Finance Institute</p>
+                <p>Developed comprehensive organizational plans and complete scientific training materials for major lectures.</p>
+              </div>
+              <div class="svc-client-card">
+                <div class="client-badge">Corporate Client</div>
+                <h4>EL7</h4>
+                <p class="svc-client-meta">Training & Consulting</p>
+                <p>End-to-end training strategies and lecture materials for a MENA-region consultancy specializing in professional development.</p>
+              </div>
+              <div class="svc-client-card">
+                <div class="client-badge">Corporate Client</div>
+                <h4>Koyfin</h4>
+                <p class="svc-client-meta">Financial Analytics</p>
+                <p>Structured training content and learning strategies for a global financial data and analytics platform.</p>
+              </div>
+            </div>
+            <div class="svc-feature-grid svc-feature-grid--small reveal">
+              <div class="svc-feature">
+                <div class="svc-feature-num">05</div>
+                <h4>Learning Strategy Design</h4>
+                <p>Evidence-based learning strategies blending pedagogical theory with practical application — every program delivers measurable outcomes.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-num">06</div>
+                <h4>Teaching & Facilitation</h4>
+                <p>Direct teaching and training delivery — leveraging education methodology to create engaging, interactive sessions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="svc-block-aside reveal">
+            <div class="svc-block-num">04</div>
+            <div class="svc-block-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="section-label">Training & Education</span>
+            <h2 class="section-title">Trusted by leading organizations.</h2>
+            <p class="section-desc">A Faculty of Education graduate with hands-on experience designing programs for the region's most respected names.</p>
+            <div class="svc-tech-row">
+              <span class="skill-tag">CFI</span>
+              <span class="skill-tag">EL7</span>
+              <span class="skill-tag">Koyfin</span>
+              <span class="skill-tag">Curriculum Design</span>
             </div>
           </div>
         </div>
@@ -96,139 +311,45 @@
 
     <div class="section-divider"></div>
 
-    <!-- ═══ SERVICE 2: GRAPHIC & WEB DESIGN ═══ -->
-    <section class="section" id="svc-design">
+    <!-- ═══ PROCESS — REDESIGNED ═══ -->
+    <section class="section svc-process" id="process">
       <div class="container">
-        <div class="svc-full reveal">
-          <div class="svc-full-header">
-            <span class="section-label">02</span>
-            <h2 class="section-title">Graphic & Web Design</h2>
-            <p class="section-desc">Design that pushes boundaries — powered by Adobe's creative suite, modern page builders, and AI-enhanced workflows.</p>
-          </div>
-          <div class="svc-full-grid">
-            <div class="svc-full-card">
-              <h4>Adobe Creative Suite</h4>
-              <p>Advanced proficiency in <strong>Photoshop</strong>, <strong>Illustrator</strong>, and <strong>InDesign</strong> — creating everything from brand identities and marketing collateral to publication layouts and digital assets.</p>
-            </div>
-            <div class="svc-full-card">
-              <h4>UI/UX Design</h4>
-              <p>Designing intuitive user interfaces and experiences with <strong>Adobe XD</strong> — wireframing, prototyping, user flow mapping, and design system creation.</p>
-            </div>
-            <div class="svc-full-card">
-              <h4>Web Design & Page Builders</h4>
-              <p>Extensive experience with <strong>Elementor</strong> and <strong>Wix</strong> — creating responsive, pixel-perfect websites with advanced custom CSS and dynamic content integration.</p>
-            </div>
-            <div class="svc-full-card">
-              <h4>AI-Powered Design</h4>
-              <p>Pioneering the fusion of <strong>AI models</strong> with <strong>Adobe tools</strong> — leveraging generative AI for rapid prototyping, asset creation, and pushing creative boundaries in web design.</p>
-            </div>
-          </div>
+        <div class="section-header reveal text-center">
+          <span class="section-label section-label--center">How I Work</span>
+          <h2 class="section-title">From idea to execution.</h2>
+          <p class="section-desc section-desc--center">Every engagement follows a clear, repeatable process — designed for clarity, momentum, and quality outcomes.</p>
         </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ═══ SERVICE 3: LMS & EDUCATIONAL SYSTEMS ═══ -->
-    <section class="section" id="svc-lms">
-      <div class="container">
-        <div class="svc-full reveal">
-          <div class="svc-full-header">
-            <span class="section-label">03</span>
-            <h2 class="section-title">LMS & Educational Systems</h2>
-            <p class="section-desc">Architecting modern learning environments — from deploying established platforms to building a custom LMS from the ground up.</p>
-          </div>
-          <div class="svc-full-grid">
-            <div class="svc-full-card">
-              <h4>Moodle</h4>
-              <p>Long-standing expertise in Moodle — course design, plugin customization, SCORM integration, grading systems, and large-scale deployment for educational institutions.</p>
+        <div class="svc-process-flow reveal">
+          <div class="svc-process-line"></div>
+          <div class="svc-process-step">
+            <div class="svc-process-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </div>
-            <div class="svc-full-card">
-              <h4>WordPress LMS Platforms</h4>
-              <p>Deep experience with <strong>LearnPress</strong>, <strong>LearnDash</strong>, and <strong>Tutor LMS</strong> — building complete e-learning ecosystems with enrollment, certification, drip content, and payment integration.</p>
-            </div>
-            <div class="svc-full-card">
-              <h4>Scratch LMS — Custom Built</h4>
-              <p>Designed and built <strong>Scratch LMS</strong> from the ground up — a fully custom learning management system tailored for specific educational workflows, user roles, and content delivery models.</p>
-            </div>
-            <div class="svc-full-card">
-              <h4>Curriculum Architecture</h4>
-              <p>Designing structured learning paths, assessment frameworks, and content strategies that maximize student engagement and knowledge retention across digital platforms.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ═══ SERVICE 4: TRAINING & EDUCATION ═══ -->
-    <section class="section" id="svc-training">
-      <div class="container">
-        <div class="svc-full reveal">
-          <div class="svc-full-header">
-            <span class="section-label">04</span>
-            <h2 class="section-title">Training & Strategic Education</h2>
-            <p class="section-desc">A Faculty of Education graduate (Arabic Language Department) with hands-on experience designing training programs for leading organizations.</p>
-          </div>
-          <div class="svc-full-grid svc-full-grid--3">
-            <div class="svc-full-card svc-full-card--highlight">
-              <div class="client-badge">Corporate Client</div>
-              <h4>CFI — Corporate Finance Institute</h4>
-              <p>Developed comprehensive organizational plans and designed complete scientific training materials for major lectures, supporting CFI's mission to deliver world-class financial education.</p>
-            </div>
-            <div class="svc-full-card svc-full-card--highlight">
-              <div class="client-badge">Corporate Client</div>
-              <h4>EL7 Training & Consulting</h4>
-              <p>Created end-to-end training strategies and lecture materials for EL7 — a consultancy specializing in professional development, strategic advisory, and organizational excellence across the MENA region.</p>
-            </div>
-            <div class="svc-full-card svc-full-card--highlight">
-              <div class="client-badge">Corporate Client</div>
-              <h4>Koyfin</h4>
-              <p>Designed structured training content and learning strategies for Koyfin — a comprehensive financial data and analytics platform used by professionals for investment research and market analysis.</p>
-            </div>
-          </div>
-          <div class="svc-full-grid" style="margin-top: var(--space-xl);">
-            <div class="svc-full-card">
-              <h4>Learning Strategy Design</h4>
-              <p>Crafting evidence-based learning strategies that blend pedagogical theory with practical application — ensuring every training program delivers measurable outcomes.</p>
-            </div>
-            <div class="svc-full-card">
-              <h4>Teaching & Facilitation</h4>
-              <p>Direct teaching and training delivery — leveraging a strong foundation in education methodology to create engaging, interactive, and impactful learning sessions.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- PROCESS -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-header reveal" style="text-align: center;">
-          <span class="section-label" style="justify-content: center;">How I Work</span>
-          <h2 class="section-title">My Process</h2>
-        </div>
-        <div class="process-grid reveal">
-          <div class="process-step">
-            <div class="process-num">01</div>
+            <div class="svc-process-num">01</div>
             <h4>Discovery</h4>
             <p>Deep dive into your goals, challenges, and vision.</p>
           </div>
-          <div class="process-step">
-            <div class="process-num">02</div>
+          <div class="svc-process-step">
+            <div class="svc-process-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>
+            </div>
+            <div class="svc-process-num">02</div>
             <h4>Strategy</h4>
             <p>Mapping the path with clear objectives and timelines.</p>
           </div>
-          <div class="process-step">
-            <div class="process-num">03</div>
+          <div class="svc-process-step">
+            <div class="svc-process-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="svc-process-num">03</div>
             <h4>Execution</h4>
             <p>Bringing strategy to life with meticulous attention.</p>
           </div>
-          <div class="process-step">
-            <div class="process-num">04</div>
+          <div class="svc-process-step">
+            <div class="svc-process-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="svc-process-num">04</div>
             <h4>Delivery</h4>
             <p>Final handoff with documentation and support.</p>
           </div>
@@ -236,13 +357,13 @@
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- ============ CTA ============ -->
     <div class="section-divider"></div>
-    <section class="section" style="text-align: center;">
+    <section class="section section--center">
       <div class="container container--narrow reveal">
-        <span class="section-label" style="justify-content: center;">Ready?</span>
-        <h2 class="section-title">Let's Build Something <span style="color: var(--color-accent); font-style: italic;">Remarkable</span></h2>
-        <p class="section-desc" style="margin: 0 auto var(--space-2xl);">Have a project in mind? Let's discuss how we can bring your vision to life.</p>
+        <span class="section-label section-label--center">Ready?</span>
+        <h2 class="section-title">Let's Build Something <span class="text-accent-italic">Remarkable</span></h2>
+        <p class="section-desc section-desc--center">Have a project in mind? Let's discuss how we can bring your vision to life.</p>
         <a href="contact.html" class="btn btn--primary">Get in Touch</a>
       </div>
     </section>
@@ -250,6 +371,19 @@
 
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="logo footer-logo" aria-label="Karim Mokhtar — Home">
+          <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="1" width="34" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+            <path d="M11 9 L11 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M11 18 L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M11 18 L20 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="26" cy="27" r="2" fill="#c9a96e"/>
+          </svg>
+          <span class="logo-text">Karim Mokhtar<span class="logo-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">Designing Systems. Coding Vibes.</p>
+      </div>
       <div class="footer-inner">
         <div class="footer-copy">&copy; 2026 Karim Mokhtar. All rights reserved.</div>
         <div class="footer-socials">

@@ -7,48 +7,83 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── Header scroll effect ───
   const header = document.getElementById('site-header');
   if (header) {
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-      lastScroll = currentScroll;
-    }, { passive: true });
+    const updateHeader = () => {
+      if (window.pageYOffset > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
   }
 
   // ─── Mobile menu toggle ───
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
+  let scrollLockY = 0;
+
+  const closeMenu = () => {
+    if (!navLinks || !navLinks.classList.contains('open')) return;
+    menuToggle.classList.remove('active');
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollLockY);
+  };
+
+  const openMenu = () => {
+    if (!navLinks || navLinks.classList.contains('open')) return;
+    scrollLockY = window.pageYOffset;
+    menuToggle.classList.add('active');
+    navLinks.classList.add('open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+    // iOS Safari scroll lock — preserves position without jump
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollLockY}px`;
+    document.body.style.width = '100%';
+  };
+
   if (menuToggle && navLinks) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-controls', 'nav-links');
+
     menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('open');
-      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+      if (navLinks.classList.contains('open')) closeMenu();
+      else openMenu();
     });
+
     // Close menu when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', () => closeMenu());
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Close on resize past breakpoint (avoids stuck-open state on rotate/resize)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (window.innerWidth > 768) closeMenu();
+      }, 100);
     });
   }
 
   // ─── Scroll reveal animations ───
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.12
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.1
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Stagger delay based on sibling index
         const delay = entry.target.dataset.delay || 0;
         setTimeout(() => {
           entry.target.classList.add('visible');
@@ -58,8 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.reveal').forEach((el, i) => {
-    // Add stagger delay for grouped siblings
+  document.querySelectorAll('.reveal').forEach((el) => {
     if (el.parentElement) {
       const siblings = Array.from(el.parentElement.querySelectorAll(':scope > .reveal'));
       const siblingIndex = siblings.indexOf(el);
@@ -75,9 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
       if (href === '#') return;
-      e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
+        e.preventDefault();
         const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
@@ -97,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isNaN(num)) return;
         const suffix = text.replace(/[0-9]/g, '');
         let current = 0;
-        const increment = Math.ceil(num / 40);
+        const increment = Math.max(1, Math.ceil(num / 40));
         const timer = setInterval(() => {
           current += increment;
           if (current >= num) {
@@ -115,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── Cursor glow effect on hero (desktop only) ───
   const hero = document.querySelector('.hero');
-  if (hero && window.innerWidth > 768) {
+  if (hero && window.matchMedia('(hover: hover) and (min-width: 769px)').matches) {
     hero.addEventListener('mousemove', (e) => {
       const rect = hero.getBoundingClientRect();
       const x = e.clientX - rect.left;

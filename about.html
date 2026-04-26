@@ -11,7 +11,16 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo">Karim<span>.</span></a>
+      <a href="index.html" class="logo" aria-label="Karim Mokhtar — Home">
+        <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="34" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+          <path d="M11 9 L11 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M11 18 L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M11 18 L20 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <circle cx="26" cy="27" r="2" fill="#c9a96e"/>
+        </svg>
+        <span class="logo-text">Karim Mokhtar<span class="logo-dot">.</span></span>
+      </a>
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -20,21 +29,21 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="page-content" style="padding-top: var(--header-height);">
+  <main class="page-content page-content--with-header">
 
     <!-- PAGE HERO -->
-    <section class="section" style="padding-bottom: 0;">
+    <section class="section section--no-bottom">
       <div class="container">
         <div class="hero-label reveal">About Me</div>
-        <h1 class="hero-title reveal" style="margin-bottom: var(--space-lg);">
+        <h1 class="hero-title reveal section-title--mb-lg">
           Design is not just what it looks like.<br>
           It's how the entire system <span class="highlight">operates.</span>
         </h1>
-        <p class="hero-subtitle reveal" style="max-width: 700px;">
+        <p class="hero-subtitle reveal page-hero-subtitle">
           Faculty of Education graduate. WordPress specialist. LMS architect. Adobe designer. Full-stack developer. I merge aesthetics with operational efficiency across every discipline.
         </p>
       </div>
@@ -81,14 +90,14 @@
     <div class="section-divider"></div>
 
     <!-- QUOTE -->
-    <section class="section" style="background: var(--color-bg-tertiary); text-align: center; position: relative; overflow: hidden;">
-      <div class="quote-bg" style="position: absolute; right: -60px; top: -60px; font-size: 20rem; font-family: var(--font-display); color: rgba(255,255,255,0.02); line-height: 1; pointer-events: none;">"</div>
-      <div class="container container--narrow reveal" style="position: relative; z-index: 2;">
-        <blockquote style="font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 600; line-height: 1.4; margin-bottom: var(--space-2xl); color: var(--color-text-primary);">
+    <section class="section quote-section">
+      <div class="quote-bg" aria-hidden="true">"</div>
+      <div class="container container--narrow reveal quote-content">
+        <blockquote class="quote-text">
           "Every pixel is placed with intention. Every system is built for scale. Every experience is designed to inspire."
         </blockquote>
-        <div style="width: 48px; height: 2px; background: var(--color-accent); margin: 0 auto var(--space-lg);"></div>
-        <p style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-text-muted);">Karim Mokhtar</p>
+        <div class="quote-divider"></div>
+        <p class="quote-author">Karim Mokhtar</p>
       </div>
     </section>
 
@@ -191,9 +200,9 @@
         <div class="timeline reveal">
           <div class="timeline-item">
             <span class="timeline-date">Present</span>
-            <h3>Founder & Creative Director</h3>
+            <h3>Operations Manager</h3>
             <h4>EL7 Consulting & Training</h4>
-            <p>Leading a multidisciplinary consultancy — building custom platforms, designing training programs, and delivering end-to-end digital solutions for organizations across the MENA region.</p>
+            <p>Leading operations across a multidisciplinary consultancy — overseeing project execution, training program delivery, and digital systems for organizations across the MENA region.</p>
           </div>
           <div class="timeline-item">
             <span class="timeline-date">Ongoing</span>
@@ -219,11 +228,11 @@
 
     <!-- CTA -->
     <div class="section-divider"></div>
-    <section class="section" style="text-align: center;">
+    <section class="section section--center">
       <div class="container container--narrow reveal">
-        <span class="section-label" style="justify-content: center;">Get in Touch</span>
+        <span class="section-label section-label--center">Get in Touch</span>
         <h2 class="section-title">Ready to collaborate?</h2>
-        <p class="section-desc" style="margin: 0 auto var(--space-2xl);">I'm always open to discussing new projects, creative ideas, or opportunities to bring your vision to life.</p>
+        <p class="section-desc section-desc--center">I'm always open to discussing new projects, creative ideas, or opportunities to bring your vision to life.</p>
         <a href="contact.html" class="btn btn--primary">Start a Conversation</a>
       </div>
     </section>
@@ -231,6 +240,19 @@
 
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="logo footer-logo" aria-label="Karim Mokhtar — Home">
+          <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="1" width="34" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+            <path d="M11 9 L11 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M11 18 L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M11 18 L20 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="26" cy="27" r="2" fill="#c9a96e"/>
+          </svg>
+          <span class="logo-text">Karim Mokhtar<span class="logo-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">Designing Systems. Coding Vibes.</p>
+      </div>
       <div class="footer-inner">
         <div class="footer-copy">&copy; 2026 Karim Mokhtar. All rights reserved.</div>
         <div class="footer-socials">
